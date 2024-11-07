@@ -1,4 +1,5 @@
-export default function TextField({inputName,inputLabel}) {
+// using Function Comp
+// export default function TextField({inputLabel,inputName,children}) {
   //en utilisant ce div car react il ne execute pas si il y'a plusieurs des CHILDREN 
   // le role de div c'est que concatiner les enfants des un seule pere DIV
   // exemple
@@ -11,11 +12,24 @@ export default function TextField({inputName,inputLabel}) {
 
 
   // mais en utilise
-  return (
+  /*return (
    <>
          <label>{inputLabel}</label>
+         
          <input name = {inputName} type="text"></input>
-         <div>Veuillez enter un valeur</div>
+         <div>{children}</div>
    </>
   )
+} */
+
+// using Class Function
+import { Component } from "react";
+export default class TextField extends Component {
+   render() {
+    return <>
+         <label>{this.props.inputLabel}</label> 
+         <input name = {this.props.inputName} type = "text"></input>
+         <div>{this.props.children}</div>        
+          </>
+   }
 }

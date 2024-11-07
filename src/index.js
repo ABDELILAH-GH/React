@@ -7,8 +7,10 @@ import TextField from './learning/2_props-children/TextField';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TextField inputLabel = "firstName"/>
-    <TextField inputName = "LastName"/>
+    <TextField inputName = "FirstName" inputLabel = "FirstName"/>
+    <TextField inputName = "LastName" inputLabel = "LastName">
+      hello this is abdelilah i'm full satck devloper
+      </TextField>
   </React.StrictMode>
 );
 
