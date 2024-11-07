@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram id="1CuSAIHoMOOnT5QaDINJ" name="Page-1">
+        <mxGraphModel dx="490" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;h2&gt;&lt;ol&gt;&lt;li&gt;props&lt;/li&gt;&lt;li&gt;children&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#00cc00&quot;&gt;State&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/h2&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#18141D;strokeColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="70" width="330" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot;&gt;composants&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#000000;fillColor=#FFCCFF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="190" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;h1&gt;سلة&lt;/h1&gt;&lt;h4&gt;variables:a,b,name&lt;/h4&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;labelBackgroundColor=#FFCCFF;strokeColor=#000000;fontColor=#FF0000;fillColor=#FFCCFF;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="260" width="110" height="130" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
