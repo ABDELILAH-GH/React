@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="N34505oQ6JHixrSWyyoD" name="Page-1">
+        <mxGraphModel dx="1340" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;&lt;ul&gt;&lt;li&gt;props&lt;/li&gt;&lt;li&gt;children&lt;/li&gt;&lt;/ul&gt;&lt;/h1&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#b1ddf0;strokeColor=#10739e;align=left;fontColor=#0000CC;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="160" width="190" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;&lt;font&gt;composant&lt;/font&gt;&lt;/h1&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;labelBackgroundColor=#99FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="endArrow=classic;html=1;fontColor=#FFCCE6;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="130" y="220" as="sourcePoint"/>
+                        <mxPoint x="180" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="&lt;h1&gt;sont les&lt;/h1&gt;&lt;h1&gt;&amp;nbsp;valeurs que ne&amp;nbsp;&lt;/h1&gt;&lt;h1&gt;reçus par&amp;nbsp;&lt;/h1&gt;&lt;h1&gt;l'exterieur&amp;nbsp;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FFCCE6;" vertex="1" parent="1">
+                    <mxGeometry x="-20" y="90" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;h1&gt;&lt;font color=&quot;#ffccff&quot;&gt;la pluspar du temps&amp;nbsp;&lt;/font&gt;&lt;/h1&gt;&lt;h1&gt;&lt;font color=&quot;#ffcce6&quot;&gt;children sont pur&amp;nbsp;&lt;/font&gt;&lt;/h1&gt;&lt;h2&gt;&lt;font color=&quot;#ffcce6&quot;&gt;l'affichage ou un composants&amp;nbsp;&lt;/font&gt;&lt;/h2&gt;&lt;h2&gt;&lt;font color=&quot;#ffcce6&quot;&gt;qui faire l'apple a un autre&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF3333;" vertex="1" parent="1">
+                    <mxGeometry x="-20" y="345" width="280" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;fontColor=#FFCCE6;entryX=1.015;entryY=0.795;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="370" as="sourcePoint"/>
+                        <mxPoint x="150" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
