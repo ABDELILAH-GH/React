@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import IsAdult from './learning/3_jsx/script';
-import Fruit from './learning/3_jsx/fruit';
-
-const ArrayFruit = ["Orange","Apple","Banana","Lemon","Water Melon"]
+//import Fruit from './learning/3_jsx/fruit';
+import State from './learning/4_state/counter';
+//const ArrayFruit = ["Orange","Apple","Banana","Lemon","Water Melon"]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
   <React.StrictMode>
-    <Fruit fruits = {ArrayFruit}/>
+    <State/>
   </React.StrictMode>
   
 );
