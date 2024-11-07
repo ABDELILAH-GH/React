@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import TextField from './learning/2_props-children/TextField';
+//import IsAdult from './learning/3_jsx/script';
+import Fruit from './learning/3_jsx/fruit';
 
+const ArrayFruit = ["Orange","Apple","Banana","Lemon","Water Melon"]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+
   <React.StrictMode>
-    <TextField inputName = "FirstName" inputLabel = "FirstName"/>
-    <TextField inputName = "LastName" inputLabel = "LastName">
-      hello this is abdelilah i'm full satck devloper
-      </TextField>
+    <Fruit fruits = {ArrayFruit}/>
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
