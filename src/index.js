@@ -4,14 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import IsAdult from './learning/3_jsx/script';
 //import Fruit from './learning/3_jsx/fruit';
-import State from './learning/4_state/counter';
+//import State from './learning/4_state/counter';
 //const ArrayFruit = ["Orange","Apple","Banana","Lemon","Water Melon"]
+import { Event } from './learning/5_events/events';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
   <React.StrictMode>
-    <State/>
+   <Event/>
   </React.StrictMode>
   
 );
