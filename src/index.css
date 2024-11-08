@@ -8,6 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+
+
 }
 
 code {
@@ -33,9 +36,10 @@ code {
   background-color: rgb(5, 248, 216);
 }
 .container{
-  width: 300px;
+
+  width: 400px;
   height: 300px;
-  background-color: rgb(240, 158, 189);
+  background-color: rgb(188, 207, 201);
   text-align: center;
   border-radius: 7px;
 }

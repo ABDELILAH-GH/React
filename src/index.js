@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Counter from './learning/5_events/tp';
+import Form from './learning/6_hooks-use-state/form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
   <React.StrictMode>
-   <Counter/>
+  <Form/>
   </React.StrictMode>
   
 );
