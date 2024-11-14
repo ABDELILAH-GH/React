@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import FruitList from './learning/7_addElementtoArray&virtualDom/fruitList';
+import Revise from './learning/4_state/tp';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-  <FruitList />
+
+  <Revise/>
   </React.StrictMode>
   
 );

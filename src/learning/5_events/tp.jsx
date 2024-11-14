@@ -12,6 +12,11 @@ export default class Counter extends Component {
       return { counter: prevState.counter + 1 };
     });
   };
+  handleClick2 = () => {
+    this.setState((prevState) => {
+      return {counter:prevState.counter -1}
+    })
+  }
   handleReset = () => {
     this.setState({ counter: 0 });
   };
@@ -23,6 +28,10 @@ export default class Counter extends Component {
           <h1>hello wolrd</h1>
           <button onClick={this.handleClick} className="btn1">
             Clicker pour inceremnter ++
+          </button>
+          <br />
+          <button onClick={this.handleClick2} className="btn1">
+            Clicker pour moins --
           </button>
           <br />
           <button onClick={this.handleReset} className="btn2">Reset </button>
