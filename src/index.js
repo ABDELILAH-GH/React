@@ -2,12 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
-
-import Revise2 from './learning/4_state/tpFunc';
-
-
-
+import Counter2 from './learning/5_events/tpFunc';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +10,7 @@ root.render(
 
   <React.StrictMode>
 
-  <Revise2/>
+  <Counter2/>
   </React.StrictMode>
   
 );
