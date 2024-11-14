@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Revise from './learning/4_state/tp';
+import Total from './learning/4_state/tpFunc';
+
 
 
 
@@ -11,7 +12,7 @@ root.render(
 
   <React.StrictMode>
 
-  <Revise/>
+  <Total/>
   </React.StrictMode>
   
 );
