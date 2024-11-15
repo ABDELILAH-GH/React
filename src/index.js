@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Counter2 from './learning/5_events/tpFunc';
+import Filiere from './learning/4_state/tp3Class';
+//import Rev from './learning/7_addElementtoArray&virtualDom/rev';
+// import ToggleName from './learning/8_compLifeCycle/toggleName';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
   <React.StrictMode>
-
-  <Counter2/>
-  </React.StrictMode>
+  {/* <ToggleName /> */}
+  {/* <Rev/> */}
+  <Filiere/>
+</React.StrictMode>
   
 );
 

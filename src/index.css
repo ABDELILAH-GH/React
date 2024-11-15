@@ -18,7 +18,7 @@ button {
   background-color: royalblue;
   border-radius: 5px;
   font-size: 20px;
-  margin-left: 4px;
+  margin-left: 6px;
 }
 
 code {
@@ -61,4 +61,8 @@ code {
   margin-top: 10px;
   color: #dbdbdb;
   font-size: 20px;
+}
+.delete{
+  width: 50px;
+  background: red;
 }

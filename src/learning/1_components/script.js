@@ -12,7 +12,21 @@ import { Component  } from "react" ;// cette importation pour le class
 
 // ----------------------------class comp---------------------------------
 export default class HelloWorld extends Component{
+     constructor(props){
+      super()
+     }
+     componentDidMount () {
+      console.log('our component is mounted')
+     }
+     componentDidUpdate(prevState){
+      console.log(prevState,this.state)
+      console.log("our component is updated")
+     }
+     componentWillUnmount () {
+      console.log('our component is dead')
+
+     }
     render (){
-      return (<h1>this is title</h1>)
+      return (<h1>Hello {this.props.last_name}</h1>)
     }
 }
