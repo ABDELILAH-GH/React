@@ -13,10 +13,8 @@ export default class Filiere extends Component {
     }
   };
   handelDelete = (value) => {
-    this.setState({
-      list: this.state.list.filter((item) => item !== value),
-    });
-  };
+    this.setState({list: this.state.list.filter((item) => item !== value)});
+   };
 
   render() {
     const list = ["DIV", "GE", "ID", "TCE", "ELT"];
@@ -35,11 +33,8 @@ export default class Filiere extends Component {
           {this.state.list.map((item, index) => (
             <li key={index}>
               {item}
-              <button
-                className="delete"
-                onClick={() => this.handelDelete(item)}
-              >
-                X
+              <button className="delete" onClick={() => this.handelDelete(item)}>
+                  X
               </button>
             </li>
           ))}

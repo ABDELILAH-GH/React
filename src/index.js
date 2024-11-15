@@ -2,17 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Filiere from './learning/4_state/tp3Class';
-//import Rev from './learning/7_addElementtoArray&virtualDom/rev';
-// import ToggleName from './learning/8_compLifeCycle/toggleName';
+import LifeCycle from './learning/9_advancedLifCycle/script';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  {/* <ToggleName /> */}
-  {/* <Rev/> */}
-  <Filiere/>
+  
+<LifeCycle/>
 </React.StrictMode>
   
 );

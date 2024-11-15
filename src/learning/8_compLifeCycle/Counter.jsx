@@ -21,7 +21,7 @@ export default class Compteur extends Component {
       })
      }
      handleRest = () => {
-        this.setState((preventState) =>{ 
+        this.setState(() =>{ 
          return {counter:0}
       })
      }

@@ -4,6 +4,7 @@ export default function Compteur ({intialValue,step}) {
 
    // les Hooks
    // en a plusieurs hooks par exemple useState
+   // en a aussi use effect
    const [count,setCount] = useState(intialValue)
    // ce composants permet d'incrementer
   const handleClick = () => {

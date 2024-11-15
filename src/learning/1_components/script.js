@@ -18,10 +18,10 @@ export default class HelloWorld extends Component{
      componentDidMount () {
       console.log('our component is mounted')
      }
-     componentDidUpdate(prevState){
-      console.log(prevState,this.state)
-      console.log("our component is updated")
-     }
+    //  componentDidUpdate(prevState){
+    //   console.log(prevState,this.state)
+    //   console.log("our component is updated")
+    //  }
      componentWillUnmount () {
       console.log('our component is dead')
 

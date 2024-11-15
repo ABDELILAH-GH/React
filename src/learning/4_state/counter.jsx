@@ -1,6 +1,6 @@
 const { Component } = require("react");
 
-export default class State extends Component{
+export default class Add extends Component{
    constructor (props){
       super (props);
       this.state = {
