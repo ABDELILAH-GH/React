@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import reportWebVitals from './reportWebVitals';
-import LifeCycle from './learning/9_advancedLifCycle/script';
+import Header from './learning/11_ToDoList/header/header';
+import InputBtn from './learning/11_ToDoList/input-btn/input-btn';
+//import List from './learning/7_addElementtoArray&virtualDom/fruitsFunc';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  
-<LifeCycle/>
+<Header/>
+<InputBtn/>
+
 </React.StrictMode>
   
 );

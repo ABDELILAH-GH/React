@@ -1,0 +1,36 @@
+
+.input{
+   width: 100%;
+   max-width: 500px;
+   height: 35px;
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding-left: 15px;
+   outline: none;
+   transition: border-color 0.5s ease;
+}
+.add{
+   background: royalblue;
+   border: none;
+   width: 80px;
+   height: 35px;
+   border-radius: 5px;
+   margin-left: 5px;
+   font-size: 15px;
+   color: aliceblue;
+}
+.input:hover{
+   border: 1px solid green;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10vh;
+}
+.task {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-content: center;
+}
