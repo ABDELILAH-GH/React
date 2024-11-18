@@ -1,19 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import "./index.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import Header from './learning/11_ToDoList/header/header';
-import InputBtn from './learning/11_ToDoList/input-btn/input-btn';
-//import List from './learning/7_addElementtoArray&virtualDom/fruitsFunc';
-
+import ProductsList from './learning/12_store/productsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-<Header/>
-<InputBtn/>
 
-</React.StrictMode>
+
+<ProductsList/>
+
   
 );
 
