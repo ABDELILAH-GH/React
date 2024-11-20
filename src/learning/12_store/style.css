@@ -58,4 +58,40 @@
  .btn-reset:hover {
    background-color: #5e666d;
  }
+
+ .categories-container {
+   height: 55px;
+   margin: 20px auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   padding: 15px;
+   border-radius: 10px;
+   background-color: #8a7d7d;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .categories-container button {
+   padding: 10px 20px;
+   background-color: #3d4144;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ 
+ .categories-container button:hover {
+   background-color: #121213;
+   transform: scale(1.05);
+   color: #e0e0e0;
+ }
+ 
+ .categories-container button:focus {
+   outline: none;
+   box-shadow: 0 0 5px #121213;
+ }
  

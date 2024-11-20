@@ -19,10 +19,9 @@ export default function ProductsList() {
   };
 
   const displayCategories = () => {
-     return categories.map((category)=>
-      <button className="btn btn-secondary">
-          {category}
-     </button>)
+    return categories.map((category) => (
+      <button>{category}</button>
+    ));
   };
 
   const displayProducts = () => {
@@ -30,7 +29,9 @@ export default function ProductsList() {
       (product) =>
         product.title.includes(searchInput) ||
         product.id.toString().includes(searchInput) ||
-        product.description.includes(searchInput)
+        product.description.includes(searchInput)  ||
+        product.price.toString().includes(searchInput)  
+   
     );
     if (productsList.length > 0) {
       return filteredProducts.map((product, productKey) => (
@@ -86,9 +87,9 @@ export default function ProductsList() {
           />
         </div>
         <h4>Categories:</h4>
-        <div className="row g-3 align-items-center">
-          <div className="btn-group">{displayCategories()}</div>
-        </div>
+        <div className="categories-container">
+         {displayCategories()}
+         </div>
       </form>
 
       <h1>Listes des produits :</h1>
