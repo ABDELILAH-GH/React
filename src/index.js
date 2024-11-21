@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import ProductsList from './learning/12_store/productsList';
+import Temperateur from './learning/4_state/tp5Func';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-<ProductsList/>
+<Temperateur/>
 
 
   
