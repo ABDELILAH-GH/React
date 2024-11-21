@@ -5,12 +5,18 @@ import "./style.css";
 export default function ProductsList() {
   const [productsList, setProductsList] = useState([]);
   const [categories, setCategoriesList] = useState([]);
+
+
   const [searchInput, setSearchInput] = useState("");
+  const [searchButton, setSearchButton] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const searchValue = document.querySelector("#search").value;
-    setSearchInput(searchValue);
+    setSearchInput(e.target.value)
+  };
+  const handleButton = (e) => {
+    e.preventDefault();
+    setSearchButton(searchInput)
   };
 
   const handleRest = (e) => {
@@ -69,19 +75,20 @@ export default function ProductsList() {
           <input
             type="text"
             name="search"
-            id="search"
+            onChange={handleSearch}
+            value={searchInput}
             className="input-search"
             placeholder="Search products..."
           />
           <input
             type="submit"
-            value="Search"
-            onClick={handleSearch}
+            value="search"
+            onClick={handleButton}
             className="btn"
           />
           <input
             type="submit"
-            value="Rest"
+            value="rest"
             onClick={handleRest}
             className="btn btn-reset"
           />

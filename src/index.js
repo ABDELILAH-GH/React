@@ -8,8 +8,8 @@ import ProductsList from './learning/12_store/productsList';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-
 <ProductsList/>
+
 
   
 );
