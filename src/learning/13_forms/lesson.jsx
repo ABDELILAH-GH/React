@@ -28,35 +28,35 @@ export default function Forms() {
     <div className={"container my-4"}>
       {JSON.stringify(formValue)}
       <h3>Form</h3>
-      <div class="mb-3">
-        <label class="form-label">Name</label>
+      <div className="mb-3">
+        <label className="form-label">Name</label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="name"
           onChange={handleChange}
         />
       </div>
-      <div class="mb-3">
-        <label class="form-label">Age</label>
+      <div className="mb-3">
+        <label className="form-label">Age</label>
         <input
           type="number"
-          class="form-control"
+          className="form-control"
           id="age"
           onChange={handleChange}
         />
       </div>
-      <div class="mb-3">
-        <label class="form-label">City</label>
+      <div className="mb-3">
+        <label className="form-label">City</label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="city"
           onChange={handleChange}
         />
       </div>
-      <div class="mb-3">
-        <label class="form-label">Country</label>
+      <div className="mb-3">
+        <label className="form-label">Country</label>
         <select className="form-control" id="country" onChange={handleChange}>
           <option value="MA">Maroc</option>
           <option value="DZ">Algérie</option>
@@ -64,21 +64,21 @@ export default function Forms() {
           <option value="OTHER">Other</option>
         </select>
       </div>
-      <div class="mb-3">
-        <label htmlFor="acceptConditions" class="form-label">
+      <div className="mb-3">
+        <label htmlFor="acceptConditions" className="form-label">
           Checked
         </label>
         <input
           id="acceptConditions"
-          class="form-check-input ms-3"
+          className="form-check-input ms-3"
           type="checkbox"
           onChange={handleChange}
         />
       </div>
-      <div class="mb-3 ">
+      <div className="mb-3 ">
         <input
           type="submit"
-          class="btn btn-primary mb-3"
+          className="btn btn-primary mb-3"
           onChange={handleChange}
         />
       </div>
