@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
- import Forms from './learning/13_forms/lesson';
+import Test from './learning/13_forms/test';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-<Forms/>
+<Test/>
 
 
   

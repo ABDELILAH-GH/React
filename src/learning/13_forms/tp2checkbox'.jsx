@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 
 export default function Hobby() {
-  const [loisirs, setLoisirs] = useState({ lecture: false, sport: false, voyage: false, films: false });
+  const [loisirs, setLoisirs] = useState({ 
+    lecture: false,
+    sport: false,
+    voyage: false,
+    films: false 
+  });
   const [choix, setChoix] = useState("");
 
   const handleChange = (e) => {
