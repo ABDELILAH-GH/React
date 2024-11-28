@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
+import Table from './table'
 
-export default function Efm() {
+export default   function EfmV2() {
    const inputId = useRef()
    const inputName = useRef()
    const inputNh = useRef()
@@ -13,31 +14,17 @@ export default function Efm() {
          nh : inputNh.current.value,
          regional : inputRegional.current.checked ? "oui" : "non"
       }
-
-      setFormValues(prevState => [...prevState,valuesOfFrom])
+      setFormValues(prevState=> [...prevState,valuesOfFrom])
    }
-   console.log(formValues)
+   const handleDelete = (id) =>  {
+     const supprimer = formValues.filter(item=> item.id !== id)
+     setFormValues(supprimer)
+ }
 
-   const handleSupprimer = (id) => {
-      const updateList  =   formValues.filter((item) => item.id !== id)
-      setFormValues(updateList)
-   }
 
-   const displayListModules = () => {
-      return formValues.map((item, index) => (
-        <tr key={index}>
-          <td>{item.id}</td>
-          <td>{item.name}</td>
-          <td>{item.nh}</td>
-          <td>{item.regional}</td>
-          <td><button type="submit"   class="btn btn-danger" onClick={()=>handleSupprimer(item.id)} >supprimer</button>
-          </td>
-        </tr>
-      ));
-    }
     
   return (
-    <div className='container   mt-4'>
+    <div className='container-fluix w-75 my-3'>
       <h3>Les modules</h3>
       <hr />
          <div className="mb-3">
@@ -46,7 +33,7 @@ export default function Efm() {
          </div>
          <div className="mb-3">
             <label for="" className="form-label">Name</label>
-            <input   type="text"   className="form-control" ref={inputName}    id="name"  placeholder="Entrez le nom du item"/>
+            <input   type="text"   className="form-control" ref={inputName}    id="name"  placeholder="Entrez le nom du module"/>
          </div>
          <div className="mb-3">
             <label for="" className="form-label">NH</label>
@@ -73,7 +60,7 @@ export default function Efm() {
                   </tr>
                </thead>
                <tbody>
-                  {displayListModules()}
+                  <Table handleDelete={handleDelete} formValues={formValues}/>
                </tbody>
             </table>
          </div>  
