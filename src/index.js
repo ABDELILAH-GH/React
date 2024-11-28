@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import UseRef from './learning/14_useRef/lesson';
+import Page from './learning/15_passingDataFromChildToParent/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-<UseRef/>
+<Page/>
 
 
   
