@@ -50,7 +50,7 @@ export default   function EfmV2() {
 
          <div className="table-responsive">
             <table className="table">
-                 <thead class="table-success">
+                 <thead class="table-warning">
                   <tr>
                      <th scope="col">ID</th>
                      <th scope="col">Name</th>

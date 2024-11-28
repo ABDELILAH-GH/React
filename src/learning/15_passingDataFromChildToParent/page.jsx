@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import LanguageSwitcher from './languageSwitcher'
 
 export default function Page() {
-   const [currentLang,setCurrentLang] = useState()
+   const [currentLang,setCurrentLang] = useState('AR')
    const displayMessage = () => {
      switch (currentLang){
       case 'AR': return 'السلام عليكم'
@@ -23,7 +23,7 @@ export default function Page() {
          className="alert alert-primary"
          role="alert"
       >
-         <strong>{displayMessage}</strong> 
+         <strong>{displayMessage()}</strong> 
       </div>
       
    </div>

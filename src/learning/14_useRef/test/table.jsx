@@ -12,11 +12,7 @@ export default function Table({formValues,handleDelete}) {
       <td>{item.nh}</td>
       <td>{item.regional}</td>
       <td>
-         <button  
-          type="submit"   
-          class="btn btn-danger" 
-          onClick={()=>handleDelete(item.id)}
-         >
+         <button   type="submit"    class="btn btn-danger"  onClick={()=>handleDelete(item.id)}>
          supprimer
          </button>
       </td>

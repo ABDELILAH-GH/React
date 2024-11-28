@@ -8,17 +8,17 @@ export default function LanguageSwitcher({onLanguageChange}) {
   return (
     <div className='container'>
   <ul
-   class="nav justify-content-center mt-4 ">
-   <li class="nav-item">
+   className="nav justify-content-center mt-4 ">
+   <li className="nav-item">
       <a className="nav-link " href="#" data-lang="AR" onClick={handeChange} >العربية</a></li>
-   <li class="nav-item">
-      <a class="nav-link" href="#" data-lang="EN" onClick={handeChange}>English</a>
+   <li className="nav-item">
+      <a className="nav-link" href="#" data-lang="EN" onClick={handeChange}>English</a>
    </li>
-   <li class="nav-item">
-      <a class="nav-link" href="#" data-lang="ES" onClick={handeChange}>Espgnol</a>
+   <li className="nav-item">
+      <a className="nav-link" href="#" data-lang="ES" onClick={handeChange}>Espgnol</a>
    </li>
-   <li class="nav-item">
-      <a class="nav-link" href="#" data-lang="FR" onClick={handeChange} >French</a>
+   <li className="nav-item">
+      <a className="nav-link" href="#" data-lang="FR" onClick={handeChange} >French</a>
    </li>
   </ul>
   
