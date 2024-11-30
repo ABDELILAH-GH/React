@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import Page from './learning/15_passingDataFromChildToParent/page';
+import Validation1 from './learning/16_formsValidation/tp1';
+// import Page from './learning/15_passingDataFromChildToParent/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-<Page/>
 
+<Validation1/>
 
 
   
