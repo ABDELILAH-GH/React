@@ -19,34 +19,36 @@ export default function FormValidation() {
      let isFormValid = true
      if(data.name.trim() === ''){
       setErrors(prevState => [...prevState, 'Name requered'])
+      isFormValid = false
+
      }
-     isFormValid = false
 
      if(data.email.trim() === ''){
       setErrors(prevState => [...prevState, 'Email requered'])
+      isFormValid = false
      }
      else if (!data.email.match(/^\S+@\S+\.\S+$/)){
       setErrors(prevState => [...prevState, 'Email format is invalid'])
+      isFormValid = false
      }
-     isFormValid = false
 
 
      if(data.message.trim() === ''){
       setErrors(prevState => [...prevState, 'Message requered'])
+      isFormValid = false
      }
-     isFormValid = false
 
 
      if(data.country.trim() === ''){
       setErrors(prevState => [...prevState, 'country not selected'])
+      isFormValid = false
      }
-     isFormValid = false
 
 
      if(!data.acceptAllConditions){
       setErrors(prevState => [...prevState, 'accept conditions shoud be clicked'])
+      isFormValid = false
      }
-     isFormValid = false
 
      return isFormValid
  }
@@ -66,7 +68,7 @@ export default function FormValidation() {
       <ul>
          {errors.map((error,key)=>
          <li key={key}>{error}</li>
-         )}Y
+         )}
       </ul>
    </div>
    : '' 
