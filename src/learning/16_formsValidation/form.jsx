@@ -5,94 +5,196 @@ export default function FormValidation3() {
   const inputEmail = useRef();
   const inputMessage = useRef();
   const inputAcceptAllConditions = useRef();
-  const [isFormSent,setIsFormSent] = useState(false)
-  const [errors,setErrors] = useState()
-  const data = {
-   name : inputName.current.value,
-   email : inputEmail.current.value,
-   message : inputMessage.current.value,
-   acceptAllConditions : inputAcceptAllConditions.current.checked,
-  }
-  const validateForm = () => {
-   if(data.name.trim() === ""){
-      
-   }
-  }
+  const [isFormSent, setIsFormSent] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+    acceptAllConditions: "",
+  });
 
-  const resetForm  = ()=>{
-   inputName.current.value =""
-   inputEmail.current.value = ""
-   inputMessage.current.value = ""
-   inputAcceptAllConditions.current.checked = false 
-  
-  }
+  // la fonction de validation de formulaire
+  const formValidate = () => {
+    const data = {
+      name: inputName.current.value,
+      email: inputEmail.current.value,
+      message: inputMessage.current.value,
+      acceptAllConditions: inputAcceptAllConditions.current.checked,
+    };
+    let isFormValid = true;
+
+    // Validation du champ name
+    if (data.name.trim() === "") {
+      setErrors((prevState) => ({
+        ...prevState,
+        name: "Name required!!",
+      }));
+      isFormValid = false;
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        name: "",
+      }));
+    }
+
+    // Validation du champ email
+    if (data.email.trim() === "") {
+      setErrors((prevState) => ({
+        ...prevState,
+        email: "Email required!!",
+      }));
+      isFormValid = false;
+    } else if (!data.email.match(/^[a-z0-9A-z.-_]+@[a-zA-Z]+\.[a-z]{2,}$/)) {
+      setErrors((prevState) => ({
+        ...prevState,
+        email: "Email format should be like example@domain.ma!!",
+      }));
+      isFormValid = false;
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        email: "",
+      }));
+    }
+
+    // Validation du champ message
+    if (data.message.trim() === "") {
+      setErrors((prevState) => ({
+        ...prevState,
+        message: "Message required!!",
+      }));
+      isFormValid = false;
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        message: "",
+      }));
+    }
+
+    // Validation de la condition acceptée
+    if (!data.acceptAllConditions) {
+      setErrors((prevState) => ({
+        ...prevState,
+        acceptAllConditions: "Accept conditions should be clicked!!",
+      }));
+      isFormValid = false;
+    } else {
+      setErrors((prevState) => ({
+        ...prevState,
+        acceptAllConditions: "",
+      }));
+    }
+
+    return isFormValid;
+  };
+
+  // fonction pour réinitialiser les valeurs de formulaire après la validation
+  const resetForm = () => {
+    inputName.current.value = "";
+    inputEmail.current.value = "";
+    inputMessage.current.value = "";
+    inputAcceptAllConditions.current.checked = false;
+
+    // Réinitialisation des états
+    setIsFormSent(false);
+    setErrors({
+      name: "",
+      email: "",
+      message: "",
+      acceptAllConditions: "",
+    });
+  };
+
+  // fonction principale qui contient toutes les autres fonctions
   const handleSubmit = (e) => {
-   e.preventDefault()
+    e.preventDefault();
+    let isValid = formValidate();
 
-     // quand tu click sur submit en affiche une alert
-     setIsFormSent(true)
-     // pour reset le formulaire 
-     resetForm()
-     console.log(data)
-  }
+    // pour afficher le message de succès après la validation et aussi réinitialiser le formulaire
+    if (isValid === true) {
+      setIsFormSent(true);
+      resetForm();
+    }
+  };
+
   return (
-     <div className="container w-75 mt-2">
-      {
-         isFormSent? 
-         <div
-         class="alert alert-success"
-         role="alert"
-      >
-         <strong>Seccess</strong> Message sent successfuly !!
+    <div className="container w-75 mt-2">
+      {isFormSent ? (
+        <div className="alert alert-success" role="alert">
+          <strong>Success</strong> Message sent successfully !!
         </div>
-        :""
+      ) : (
+        ""
+      )}
+      {Object.values(errors).some((error) => error) && (
+        <div class="alert alert-danger" role="alert">
+          <strong>Errors:</strong>
+          <ul>
+             {Object.entries(errors).map(([key, error]) =>
+              error ? <li key={key}>{error}</li> : null
+           )}
+          </ul>
 
-      }
+        </div>
+      )}
 
-      
-         <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h3>Contact form</h3>
         <hr />
         <div className="mb-3">
-          <label for="" className="form-label">
+          <label htmlFor="" className="form-label">
             Name
           </label>
-          <input type="text" className="form-control" id="name" ref={inputName} />
+          <input
+            type="text"
+            className={`form-control ${errors.name ? "is-invalid" : ""}`}
+            id="name"
+            ref={inputName}
+          />
+          {errors.name && <div className="invalid-feedback">{errors.name}</div>}
         </div>
         <div className="mb-3">
-          <label for="" className="form-label">
-            Email adress
+          <label htmlFor="" className="form-label">
+            Email address
           </label>
           <input
-            type="email"
-            className="form-control"
+            type="text"
+            className={`form-control ${errors.email ? "is-invalid" : ""}`}
             id="email"
             ref={inputEmail}
           />
+          {errors.email && <div className="invalid-feedback">{errors.email}</div>}
         </div>
         <div className="mb-3">
-          <label for="" className="form-label">
+          <label htmlFor="" className="form-label">
             Message
           </label>
           <textarea
-            className="form-control"
+            className={`form-control ${errors.message ? "is-invalid" : ""}`}
             id="message"
             rows="3"
             ref={inputMessage}
           ></textarea>
+          {errors.message && <div className="invalid-feedback">{errors.message}</div>}
         </div>
-        <div classNameName="mb-3">
+        <div className="mb-3">
           <div className="form-check">
             <input
-              className="form-check-input"
+              className={`form-check-input ${errors.acceptAllConditions ? "is-invalid" : ""}`}
               type="checkbox"
               value=""
               id="accept"
               ref={inputAcceptAllConditions}
+              htmlFor="accept"
             />
+         
+
             <label className="form-check-label" htmlFor="accept">
               Accept all conditions
             </label>
+            {errors.acceptAllConditions && (
+              <div className="invalid-feedback">{errors.acceptAllConditions}</div>
+            )}
           </div>
 
           <button type="submit" className="btn btn-primary mt-2">
@@ -100,6 +202,6 @@ export default function FormValidation3() {
           </button>
         </div>
       </form>
-     </div>
+    </div>
   );
 }
