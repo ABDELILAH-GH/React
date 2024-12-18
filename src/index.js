@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-import Diaf from './learning/17_api/test';
+import Router from './learning/18_router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
- <Diaf/>
+  <Router/>
 
 
   
