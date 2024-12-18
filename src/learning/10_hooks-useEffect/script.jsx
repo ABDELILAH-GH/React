@@ -48,12 +48,27 @@ export default function Add({ intialValue, step }) {
 
  
   return (
-    <>
+    <div className="container w-75 mt-3">
       Date : <span>{time.toLocaleString()}</span><br />
-      <button onClick={handleClick}>incrementer</button><br />
-      <button onClick={handleReset}>reset</button><br />
+      <hr />
       <h1>il y'a {count} seconds</h1>
-    </>
+
+      <button
+        type="submit"
+        class="btn btn-primary "
+        onClick={handleClick}
+      >
+        incrementer
+      </button>
+      <button
+        type="submit py-3"
+        class="btn btn-primary ms-3"
+        onClick={handleReset}
+      >
+        reset
+      </button>
+      <hr />
+    </div>
   );
 }
 // use this

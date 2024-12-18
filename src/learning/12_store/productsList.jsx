@@ -16,7 +16,7 @@ export default function ProductsList() {
   };
   const handleButton = (e) => {
     e.preventDefault();
-    setSearchButton(searchInput)
+    setSearchButton(searchButton  )
   };
 
   const handleRest = (e) => {

@@ -1,50 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export default function Api() {
   const [products, setProducts] = useState([]);
 
-  // Utilisation de useEffect pour charger les données une seule fois après le premier rendu
+  // Charger les produits depuis l'API
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
-      .then((data) => setProducts(data))
-  }, []);  // Le tableau vide [] assure que l'effet ne se déclenche qu'une fois lors du montage du composant
+      .then((data) => setProducts(data));
+  }, []);
 
-  // Fonction pour afficher les produits
+  // Fonction pour afficher les produits sous forme de cartes
   const displayProduct = () => {
     return products.map((item, key) => (
-      <tr key={key}>
-        <td>{item.id}</td>
-        <td>{item.title}</td>
-        <td>{item.price}</td>
-        <td>{item.description.slice(1,50)}</td>
-        <td>{item.category}</td>
-        <td><img src={item.image} alt={item.title} style={{ width: "100px", height: "100px" }} /></td>
-        <td>{item.rating.rate}</td>
-      </tr>
+      <div className="card m-2" key={key} style={{ width: "10rem" }}>
+        <img
+          src={item.image}
+          className="card-img-top"
+          alt={item.title}
+          style={{ height: "200px", objectFit: "contain" }}
+        />
+        <div className="card-body">
+          <h5 className="card-title">{item.title}</h5>
+          <p className="card-text">
+          <strong>description:</strong>{item.description.slice(0, 50)}...
+          </p>
+          <p className="card-text">
+            <strong>Prix:</strong> ${item.price}
+          </p>
+          <p className="card-text">
+            <strong>Catégorie:</strong> {item.category}
+          </p>
+        </div>
+      </div>
     ));
   };
 
   return (
-    <div className='container w-80 mt-4'>
-      <div className="table-responsive">
-        <table className="table">
-          <thead className="table table-warning">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Title</th>
-              <th scope="col">Price</th>
-              <th scope="col">Description</th>
-              <th scope="col">Category</th>
-              <th scope="col">Image</th>
-              <th scope="col">Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            {displayProduct()}
-          </tbody>
-        </table>
+    <div className="container w-75 mt-3">
+      <div className="row">
+        <div className="d-flex flex-wrap justify-content-center">
+          {displayProduct()}
+        </div>
       </div>
+      
     </div>
   );
 }
