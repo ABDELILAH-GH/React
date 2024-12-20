@@ -8,9 +8,14 @@ export default function Layout (){
           <li class="nav-item">
                <Link to='/' className = "nav-link">Home</Link>
           </li>
+          
+
           <li class="nav-item">
                <Link to='/blogs' className="nav-link"> Blogs</Link>
           </li>
+
+
+          
           <li class="nav-item">
              <Link to = '/contact' className= "nav-link">Contact</Link>
           </li>
