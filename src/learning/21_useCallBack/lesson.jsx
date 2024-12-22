@@ -9,7 +9,7 @@ export default function Maths(){
    const  result = a+b
    console.log(result)
    return result
-   },[])
+   },[a,b])
 //alors le role de useCallBack dans cette cas c'est que : stoke la valeur de a et b 
 // si la valeur de a ou b a changer le useCallback faire le render si le contaraire useCallBack
 // ahhh j'ai deja la valeur de a et b alors en affche le resultat sans trous tard 
