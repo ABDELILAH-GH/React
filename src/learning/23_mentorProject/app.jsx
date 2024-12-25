@@ -6,7 +6,6 @@ import Mentor from "./Mentor";
 import Titre2 from "./Titre2";
 import Titre3 from "./titre3";
 import Titre4 from "./titre4";
-import Footer from "./Footer";
 
 export default function AppMentor() {
   return (
@@ -19,7 +18,6 @@ export default function AppMentor() {
          <Route path="/home/titre2/titre3" element={<Titre3/>}/>
          <Route path="/home/titre2/titre3/titre4" element={<Titre4/>}/>
       </Routes>
-     <Footer/>
     </div>
   );
 }

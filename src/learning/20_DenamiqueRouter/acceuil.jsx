@@ -5,7 +5,7 @@ import gsExams from './images/gsExams.jpg';
 export default function Acceuil() {
   return (
    <div 
-   className="container-fluid p-0"
+   className="container-fluid p-0 "
    style={{
      backgroundImage: `url(${gsExams})`,
      backgroundSize: 'cover',
