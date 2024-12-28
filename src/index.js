@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-import AppTodoList from './learning/24_redux/TP/app';
+import Controle1Class from './learning/25_controle/controle1Class';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,7 @@ root.render(
   //     <AppMentor />
   //   </BrowserRouter>
   // </React.StrictMode>
-  <AppTodoList/>
+  <Controle1Class/>
 );
 
 // If you want to start measuring performance in your app, pass a function

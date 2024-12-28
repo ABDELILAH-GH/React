@@ -31,10 +31,10 @@ export default function Task() {
                 <td>{task.isComplet ? "Oui" : "Non"}</td>
                 <td>
                   <button
-                    className="btn btn-success btn-sm me-2"
+                    className={`btn btn-sm me-2 ${task.isComplet ? "btn-info" : "btn-success"}`}
                     onClick={() => dispatch(terminee(task.id))}
                   >
-                    Terminer
+                    {task.isComplet ? "En cours" : "Terminer"}
                   </button>
                   <button
                     className="btn btn-danger btn-sm"
