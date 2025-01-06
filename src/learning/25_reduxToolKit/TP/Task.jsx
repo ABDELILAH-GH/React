@@ -9,14 +9,15 @@ export default function Task() {
   return (
     <div className="container mt-3 w-75">
       <h3>To Do List</h3>
-      <div className="table-responsive">
+      <div className="table-responsive text-center">
         <table className="table">
           <thead className="table table-warning">
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Label</th>
               <th scope="col">Terminé</th>
-              <th scope="col">Actions</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -43,7 +44,9 @@ export default function Task() {
                   >
                     {task.isComplet ? "En cours" : "Terminer"}
                   </button>
-                  <button
+                </td>
+                <td>
+                <button
                     className="btn btn-danger btn-sm"
                     onClick={() => dispatch(supprimer(task.id))}
                   >

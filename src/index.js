@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-import AppTodoListToolkit from './learning/25_reduxToolKit/TP/AppTodoList';
+import AppDn from './learning/25_controle/routageDenamique/App';
 
 
 
@@ -14,7 +14,7 @@ root.render(
   //     <AppMentor />
   //   </BrowserRouter>
   // </React.StrictMode>
-  <AppTodoListToolkit/>
+  <AppDn/>
 
 );
 
