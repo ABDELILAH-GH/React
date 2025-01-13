@@ -1,19 +1,18 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LayoutDn from "./components/layout";
-import BlogsDn from "./pages/Blogs";
-import BlogPost from "./pages/BlogsPost";
-
-
-export default function AppDn() {
+import Nav from "./nav";
+import Blogs from "./pages/Blogs";
+import BlogsPost from "./pages/BlogsPost";
+export default function AppDenamique() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LayoutDn />}>
-          <Route index element={<BlogsDn />} />
-          <Route path="blogs/:blogId" element={<BlogPost />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Nav/>}>
+          <Route index element={<Blogs/>}/>
+          <Route path="/blogs/:blogId" element={<BlogsPost />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }

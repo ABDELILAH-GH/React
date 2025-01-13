@@ -1,20 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
-export default function BlogPost() {
-  const { blogId } = useParams();
-
-  // Simulated blog data for demonstration
-  const blogData = {
-    1: "This is a detailed article about React Router.",
-    2: "Learn about React Hooks and how they simplify state management.",
-    3: "Explore how to use Redux for state management in large applications.",
-  };
-
-  return (
-    <div>
-      <h1>Blog Post {blogId}</h1>
-      <p>{blogData[blogId] || "Blog post not found."}</p>
-    </div>
-  );
+export default function BlogsPost() {
+  const {blogId} = useParams()
+  const blogsData  = {
+    1:"description of post 1",
+    2:"description of post 2",
+    3:"description of post 3",
+  }
+  return (<>
+         <h2>blogs post {blogId} </h2>
+         <p>{blogsData[blogId] || "blogs post not found"}</p>
+  </>)
 }

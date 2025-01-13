@@ -21,7 +21,7 @@ export default function Task() {
             </tr>
           </thead>
           <tbody>
-            {tasks.map((task) => (
+            {tasks?.map((task) => (
               <tr key={task.id}>
                 <td>{task.id}</td>
 

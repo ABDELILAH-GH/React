@@ -17,10 +17,10 @@ const tasksSlice = createSlice({
       state.tasks = state.tasks.filter((task) => task.id !== action.payload);
     },
     terminee: (state, action) => {
-      const task = state.tasks.find((task) => task.id === action.payload);
-      if (task) {
-        task.isComplet = !task.isComplet;
-      }
+      state.tasks.find(task=>task.id === action.payload 
+        ? task.isComplet = !task.isComplet
+        :task
+      )
     },
   },
 });

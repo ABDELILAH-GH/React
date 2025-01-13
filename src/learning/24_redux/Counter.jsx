@@ -6,6 +6,9 @@ export default function Counter() {
   const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
 
+  // useSelector: كتاخذ القيمة ديال العدد (count) من الستيت (state) ديال Redux.
+  // useDispatch: كتسمح ليك تبعث الأكشنز (actions) باش تبدّل القيمة ديال العدد.
+
   return (
     <div className="container mt-5 w-50 py-10">
       <div className="card border-0 bg-light text-dark">
