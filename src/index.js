@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-import RnTest from './learning/25_controle/reduxToolkit/normale/app';
-import Rww from './learning/25_controle/reduxToolkit/toolkit\'/app';
+import Efm2023 from './learning/26_efm/redux/app';
+import AjouterStagiaire from './learning/26_efm';
 
 
 
@@ -15,7 +15,7 @@ root.render(
   //     <AppMentor />
   //   </BrowserRouter>
   // </React.StrictMode>
-  <Rww/>
+  <AjouterStagiaire/>
 
 );
 
