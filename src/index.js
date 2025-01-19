@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-import Efm2023 from './learning/26_efm/redux/app';
-import AjouterStagiaire from './learning/26_efm';
+import ApptlEmf from './learning/26_efm/toolkit\'/app';
 
 
 
@@ -15,7 +14,7 @@ root.render(
   //     <AppMentor />
   //   </BrowserRouter>
   // </React.StrictMode>
-  <AjouterStagiaire/>
+  <ApptlEmf/>
 
 );
 
